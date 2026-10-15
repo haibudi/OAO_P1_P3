@@ -1,0 +1,123 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+
+    @*@Styles.Render("~/Content/css")*@
+    @*@Scripts.Render("~/bundles/modernizr")*@
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/kendo-ui/styles/kendo.bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/kendo-ui/styles/kendo.bootstrap.mobile.min.css">
+    <link rel="stylesheet" href="~/Content/kendo-ui/styles/kendo.common.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="~/Content/sweetalert2.min.css" /> -->
+    <link rel="stylesheet" href="~/Content/sweetalert2/dist/sweetalert2.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/loader.css" />
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @*@RenderSection("scripts", required: false)*@
+
+    <script src="~/Scripts/lodash.min.js"></script>
+    <script src="~/Scripts/moment.js"></script>
+    <script src="~/Scripts/bootstrap-datetimepicker.min.js"></script>
+    <script src="~/Scripts/kendo-ui/js/kendo.all.min.js"></script>
+    <script src="~/Scripts/knockoutjs/knockout-3.4.2.js"></script>
+    <script src="~/Scripts/knockoutjs/knockout.mapping-2.4.1.js"></script>
+    <script src="~/Scripts/knockout-kendo/knockout-kendo.min.js"></script>
+    <!-- <script src="~/Scripts/sweetalert2.min.js"></script> -->
+    <script src="~/Content/sweetalert2/dist/sweetalert2.min.js"></script>
+    <!-- <script src="~/Scripts/polyfill/promise.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.js"></script>
+
+    <style>
+        .head-center1 {
+            text-align: center;
+            font-weight: 900 !important;
+            font-family: ITCFranklinGothicStd-Demi !important;
+            font-size: 24px !important;
+        }
+
+        .head-center2{
+            font-size: 20px
+        }
+        body {
+            line-height: 30px;
+        }
+
+        .table-head{
+            margin-top: 10px;
+            border-bottom: solid;
+        }
+        .td-head{
+            padding: 4px;
+        }
+
+        .triangle-bullet {
+            font-size: 25px;
+            vertical-align: middle;
+        }
+
+        td > p {
+            margin: 0px 0px 0px;
+        }
+        .ul-head {
+            list-style-position: outside;
+            padding-inline-start: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="col-md-12">
+            <table style="width:100%" class="table-head">
+                <tr>
+                    <td width="20%" class="td-head">
+                        <p>form <span style="font-weight: bold; font-size: 44px;">W-8BEN</span></p>
+                        <p>(Rev. July 2017)</p>
+                        <p style="line-height: 18px;">Department of the Treasury  Internal Revenue Service</p>
+                    </td>
+                    <td width="60%" style="text-align:center; border-left: solid; border-right: solid" class="td-head">
+                        <p class="head-center1">Certificate of Foreign Status of Beneficial Owner for United States Tax Withholding and Reporting (Individuals)</p>
+                        <p style="line-height: 22px;">
+                            <span class="triangle-bullet">&#8227</span> For use by individuals. Entities must use Form W-8BEN-E.
+                            <br />
+                            <span class="triangle-bullet">&#8227</span> Go to  www.irs.gov/FormW8BEN for instructions and the latest information.
+                            <br />
+                            <span class="triangle-bullet">&#8227</span> Give this form to the withholding agent or payer. Do not send to the IRS.
+                        </p>
+                    </td>
+                    <td width="20%" style="text-align:center" class="td-head">OMB No. 1545-1621</td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-md-12">
+            <div style="float:left;font-weight:bold;font-size:12px;">
+                Do NOT use this form if:
+            </div>
+            <div style="float:right;font-weight:bold;font-size:12px;">Instead, use Form:</div>
+        </div>
+        <div class="col-md-12">
+            <ul class="ul-head">
+                <li>You are NOT an individual</li>
+                <li>You are a U.S. citizen or other U.S. person, including a resident alien individual </li>
+                <li>You are a beneficial owner claiming that income is effectively connected with the conduct of trade or business within the U.S <br /> (other than personal services) </li>
+                <li> You are a beneficial owner who is receiving compensation for personal services performed in the United States</li>
+                <li>You are a person acting as an intermediary </li>
+            </ul>
+            <hr style="        border-top: 1px solid #333;margin-top: -10px;margin-bottom: 0px;"/>
+            <p style="line-height:20px"><span style="font-weight: bold">Note:</span> If you are resident in a FATCA partner jurisdiction (i.e., a Model 1 IGA jurisdiction with reciprocity), certain tax account information may be provided to your jurisdiction of residence.</p>
+        </div>
+    </div>
+    
+</body>
+</html>

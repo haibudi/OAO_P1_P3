@@ -1,0 +1,192 @@
+﻿.label10 {
+    margin-top: 10px;
+}
+
+.red {
+    color: red;
+}
+
+.ds > p {
+    margin: 0 0 0;
+    padding: 0;
+}
+
+.checkbox input,
+.checkbox p {
+    display: inline-block
+}
+
+.label-right {
+    text-align: left !important;
+}
+
+.mgr10 {
+    padding-left: 15px;
+}
+
+./*area_{
+    width: 10%
+}*/
+
+
+
+.fm-group {
+    margin-bottom: 4% !important;
+}
+
+
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active >a  {
+    background-color: #0094ff;
+    color:#fff;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .area_ {
+        width: 35%;
+    }
+    #trad {
+        margin-left: 5px !important;
+    }
+
+    .checkbox-inline, .radio-inline{
+        margin-bottom : 10px;
+    }
+
+    .onbreak1{
+        padding-bottom: 15px;
+    }
+
+    .checkbox, .radio {
+        position: relative;
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 21px !important;
+        /*margin-left: 6px !important;*/
+    }
+
+    .unt_num {
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+    }
+
+    .container {
+        padding-right: 10px !important;
+        padding-left: 10px !important;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .area_{
+        width: 35%;
+    }
+    #trad {
+        margin-left: -22px !important;
+    }
+
+    .checkbox-inline, .radio-inline {
+        margin-bottom: 10px;
+    }
+
+    .checkbox, .radio {
+        position: relative;
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+
+    .container {
+        padding-right: 10px !important;
+        padding-left: 10px !important;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .area_ {
+        width: 35%;
+    }
+    .in-radio {
+        padding-left: 3% !important;
+    }
+    /*# {
+        margin-left: 10px !important;
+    }*/
+    .container {
+        padding-right: 10px !important;
+        padding-left: 10px !important;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .area_ {
+        width: 20%;
+    }
+    .in-radio {
+        padding-left: 3% !important;
+    }
+    #trad {
+        margin-left: 10px !important;
+    }
+
+    .unt_num {
+        padding: 0;
+    }
+
+    
+    
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .area_ {
+        width: 20%;
+    }
+    .in-radio {
+        padding-left: 3% !important;
+    }
+
+    .unt_num {
+        padding: 0;
+    }
+    /*#trad {
+        margin-left: 10px !important;
+    }*/
+
+    /*.checkbox, .radio {
+        position: relative;
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 21px;
+    }*/
+
+    input[type=checkbox] {
+        /* Double-sized Checkboxes */
+        -ms-transform: scale(1.5); /* IE */
+        -moz-transform: scale(1.5); /* FF */
+        -webkit-transform: scale(1.5); /* Safari and Chrome */
+        -o-transform: scale(1.5); /* Opera */
+        transform: scale(1.5);
+        padding: 10px;
+    }
+
+    input[type=radio] {
+        /* Double-sized Checkboxes */
+        -ms-transform: scale(1.5); /* IE */
+        -moz-transform: scale(1.5); /* FF */
+        -webkit-transform: scale(1.5); /* Safari and Chrome */
+        -o-transform: scale(1.5); /* Opera */
+        transform: scale(1.5);
+        padding: 10px;
+    }
+}

@@ -1,0 +1,30 @@
+﻿var email_domain_list = [
+    "126.com",
+    "139.com",
+    "163.com",
+    "189.cn",
+    "aliyun.com",
+    "baidu.com",
+    "foxmail.com",
+    "gmail.com",
+    "hkbn.net",
+    "hkt.com",
+    "hku.hk",
+    "hotmail.com",
+    "icloud.com",
+    "live.com",
+    "netvigator.com",
+    "outlook.com",
+    "pccw.com",
+    "protonmail.com",
+    "qq.com",
+    "sina.cn",
+    "sina.com",
+    "sohu.com",
+    "yahoo.com",
+    "yahoo.com.cn",
+    "yahoo.com.hk",
+    "yeah.net"
+
+];
+

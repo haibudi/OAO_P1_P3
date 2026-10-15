@@ -1,0 +1,187 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+
+    @*@Styles.Render("~/Content/css")*@
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/kendo-ui/styles/kendo.bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/kendo-ui/styles/kendo.bootstrap.mobile.min.css">
+    <link rel="stylesheet" href="~/Content/kendo-ui/styles/kendo.common.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Scripts/data-tables/datatables.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/Scripts/data-tables/Responsive-2.4.0/css/responsive.bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Content/sweetalert2/dist/sweetalert2.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/loader.css" />
+
+    @*@Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")*@
+    <script src="~/Scripts/jquery1.12.4.js"></script>
+    <script src="~/Scripts/moment2.15.1.js"></script>
+    @RenderSection("scripts", required: false)
+
+    <script src="~/Scripts/lodash.min.js"></script>
+    <script src="~/Scripts/moment.js"></script>
+    @*<script src="~/Scripts/bootstrap-datetimepicker.min.js"></script>*@
+    <script src="~/Scripts/kendo-ui/js/kendo.all.min.js"></script>
+    <script src="~/Scripts/knockoutjs/knockout-3.4.2.js"></script>
+    <script src="~/Scripts/knockoutjs/knockout.mapping-2.4.1.js"></script>
+    <script src="~/Scripts/knockout-kendo/knockout-kendo.min.js"></script>
+    <script src="~/Scripts/data-tables/datatables.min.js"></script>
+    <script src="~/Scripts/data-tables/Responsive-2.4.0/js/dataTables.responsive.min.js"></script>
+    <!-- <script src="~/Scripts/sweetalert2.min.js"></script> -->
+    <script src="~/Content/sweetalert2/dist/sweetalert2.min.js"></script>
+    <!-- <script src="~/Scripts/polyfill/promise.min.js"></script> -->
+    <script src="~/Scripts/polyfill/polyfill.js"></script>
+    <script src="~/Scripts/boostrap3.3.7.min.js"></script>
+    <script src="~/Scripts/boostrap-datetimepicker4.7.14.min.js"></script>
+    <script src="~/Scripts/bootstrap3-typehead.min.js"></script>
+
+    <link rel="stylesheet" href="~/Content/boostrap3.3.7.min.css">
+    <link rel="stylesheet" href="~/Content/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css">
+
+    <style>
+        body {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .k-dropdown .k-dropdown-wrap {
+            height: 32px;
+        }
+
+        .k-dropdown-wrap .k-input {
+            line-height: 2em;
+        }
+
+        .k-dropdown-wrap .k-icon {
+            position: relative;
+            top: 1px;
+        }
+
+        .swal2-popup {
+            font-size: 1em !important;
+        }
+
+        checkbox label, .radio label {
+            min-height: 20px;
+            padding-left: 30px !important;
+            margin-bottom: 0;
+            font-weight: 400;
+            cursor: pointer;
+        }
+
+        a {
+            word-wrap: break-word;
+        }
+    </style>
+    <script>
+        //console.log("----------------"+'@(ViewBag.ID)')
+        strPID = '@(ViewBag.PID)';
+        isIntranet = '@(ViewBag.Intranet)';
+         var model = {
+            istest: 1,
+            loader: ko.observable(false),
+            edit: ko.observable(false),
+            urlLang: ko.observable('@(ViewBag.Lang)'),
+            lang: ko.observable(),
+            change_lang: ko.observable(""),
+            data: ko.observable(JSON.parse('@(Html.Raw(ViewData["data"]))')),
+            data_country: ko.observable(JSON.parse('@(Html.Raw(ViewData["data_country"]))')),
+            AeCode: ko.observable('@(ViewBag.AeCode)'),
+            AeName: ko.observable('@(ViewBag.AeName)'),
+            mobileNumber: ko.observable('@(ViewBag.MobileNumber)'),
+            countryCode: ko.observable('@(ViewBag.countryCode)'),
+            pid: ko.observable(0),
+            PromotionCode: ko.observable('@(ViewBag.PromotionCode)'),
+            page_url: ko.observable(@(ViewBag.page_url)),
+            page: ko.observable(0),
+            ID: ko.observable('@(ViewBag.ID)'),
+            email: ko.observable(''),
+            login: ko.observable('@(ViewBag.Login)' == "1" ? true : false),
+            source: ko.observable('@(ViewBag.Source)'),
+            host: ko.observable(window.location.protocol + "//" + window.location.host + window.location.pathname),
+
+        }
+        if (strPID != "") {
+            model.pid(parseInt(strPID));
+        }
+    </script>
+    <script src="~/core/bilingual/en-us.js?v='@(ViewBag.Version)'"></script>
+    <script src="~/core/bilingual/zh-cn.js?v='@(ViewBag.Version)'"></script>
+    <script src="~/core/bilingual/zh-hk.js?v='@(ViewBag.Version)'"></script>
+</head>
+<body>
+    <div class="container body-content" hidden>
+        <div class="onloader" data-bind="visible:model.loader"></div>
+        <div class="col-md-12" style="padding-bottom:15px;">
+            <img src="~/img/header_philiph.png" style="width:100%;height:35%;" />
+        </div>
+        @*<hr />*@
+        @RenderBody()
+
+        @*<footer>
+                <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            </footer>*@
+    </div>
+
+
+
+</body>
+</html>
+
+
+
+<script>
+    //console.log("---------------1")
+    var lang = '<%=Session("Language")%>'
+    //console.log("---------------2")
+    ko.applyBindings(model);
+    switch (model.urlLang()) {
+        case "en-us":
+            model.lang(ko.mapping.fromJS(en_us));
+            document.write("<script type='text/javascript' src='@Url.Content("~/Scripts/kendo-ui/js/messages/kendo.messages.en-US.min.js")'><\/script>");
+            break;
+        case "zh-hk":
+            model.lang(ko.mapping.fromJS(zh_hk));
+            document.write("<script type='text/javascript' src='@Url.Content("~/Scripts/kendo-ui/js/messages/kendo.messages.zh-HK.min.js")'><\/script>");
+
+            break;
+        case "zh-cn":
+            model.lang(ko.mapping.fromJS(zh_cn));
+            document.write("<script type='text/javascript' src='@Url.Content("~/Scripts/kendo-ui/js/messages/kendo.messages.zh-CN.min.js")'><\/script>");
+            break
+    }
+    //console.log("---------------3")
+    if (model.data().data_form.SubmitStatus == "Submitted") {
+        if (isIntranet == "1") {
+            //alert("masuk")
+            $(".container").show();
+            model.loader(true);
+        } else {
+            $(".container").css("display", "none");
+            Swal.fire({
+                icon: 'success',
+                title: (model.lang() != undefined) ? model.lang().thankyou() : '',
+                width: 800,
+                html: (model.lang() != undefined) ? model.lang().will_process() : '',
+                confirmButtonText: (model.lang() != undefined) ? model.lang().back_to_poems() : '',
+                allowOutsideClick: false,
+            }).then(function (result) {
+                if (result.isConfirmed) {
+                    window.location.href = "http://www.poems.com.hk/en-us/";
+                }
+            });
+        }
+        
+    } else {
+
+        $(".container").show();
+        model.loader(true);
+    }
+
+</script>

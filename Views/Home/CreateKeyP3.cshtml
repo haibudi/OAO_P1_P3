@@ -1,0 +1,226 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CreateKeyP3</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+
+   
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/kendo-ui/styles/kendo.bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/kendo-ui/styles/kendo.bootstrap.mobile.min.css">
+    <link rel="stylesheet" href="~/Content/kendo-ui/styles/kendo.common.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="~/Content/sweetalert2.min.css" /> -->
+    <link rel="stylesheet" href="~/Content/sweetalert2/dist/sweetalert2.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/loader.css" />
+
+   
+    <script src="~/Scripts/jquery1.12.4.js"></script>
+    <script src="~/Scripts/moment2.15.1.js"></script>
+
+    <script src="~/Scripts/lodash.min.js"></script>
+    <script src="~/Scripts/moment.js"></script>
+    @*<script src="~/Scripts/bootstrap-datetimepicker.min.js"></script>*@
+    <script src="~/Scripts/kendo-ui/js/kendo.all.min.js"></script>
+    <script src="~/Scripts/knockoutjs/knockout-3.4.2.js"></script>
+    <script src="~/Scripts/knockoutjs/knockout.mapping-2.4.1.js"></script>
+    <script src="~/Scripts/knockout-kendo/knockout-kendo.min.js"></script>
+    <!-- <script src="~/Scripts/sweetalert2.min.js"></script> -->
+    <script src="~/Content/sweetalert2/dist/sweetalert2.min.js"></script>
+    <!-- <script src="~/Scripts/polyfill/promise.min.js"></script> -->
+    <script src="~/Scripts/polyfill/polyfill.js"></script>
+    <script src="~/Scripts/boostrap3.3.7.min.js"></script>
+    <script src="~/Scripts/boostrap-datetimepicker4.7.14.min.js"></script>
+
+    <link rel="stylesheet" href="~/Content/boostrap3.3.7.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/css/bootstrap-datetimepicker.min.css">
+    <script>
+        var createKey = '@Url.Action("CreateKey", "Key")';
+        var meanKey = '@Url.Action("ParsCode", "Key")';
+        var model = {
+            loader: ko.observable(false),
+            token: ko.observable("")
+        }
+    </script>
+</head>
+<body>
+    <div class="col-md-12" style="padding-top:15px">
+        <div class="form-horizontal">
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="ClientId">ClientId :</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="ClientId" placeholder="ClientId" value="P3HK">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="phillipId">phillipId :</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="phillipId" placeholder="phillipId" value="100000001">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="countryCode">countryCode :</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="countryCode" placeholder="countryCode" value="86">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="mobileNumber">mobileNumber :</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="mobileNumber" placeholder="mobileNumber" value="123 456 789">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="iss">iss :</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="iss" placeholder="iss" value="P3HK">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="iat">iat :</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="iat" placeholder="fill if you have iat">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="language">language :</label>
+                <div class="col-sm-10">
+                    <select class="form-control" id="language">
+                        <option value="">Select language</option>
+                        <option value="en-us">en-us</option>
+                        <option value="zh-hk">zh-hk</option>
+                        <option value="zh-cn">zh-cn</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="AECode">AECode :</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="AECode" placeholder="AECode">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="AEName">AEName :</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="AEName" placeholder="AEName">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="PromoCode">PromoCode :</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="PromoCode" placeholder="PromoCode">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="Source">Source :</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="Source" placeholder="Source">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button onclick="createkeyAndGo()" class="btn btn-default">Test</button>
+                    <button onclick="decodeKey()" class="btn btn-default" style="display: none;">Decode</button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+
+
+    <script>
+        createkeyAndGo = function () {
+            var ClientId = $("#ClientId").val();
+            var phillipId = $("#phillipId").val();
+            var countryCode = $("#countryCode").val();
+            var mobileNumber = countryCode +" "+$("#mobileNumber").val();
+            var iss = $("#iss").val();
+            var iat = $("#iat").val();
+            var iat = createEpoch()
+            var lang = $("#language").val();
+            var AECode = $("#AECode").val();
+            var AEName = $("#AEName").val();
+            var PromoCode = $("#PromoCode").val();
+            var Source = $("#Source").val();
+
+            if (ClientId != "" && phillipId != "" && countryCode != "" && countryCode != "" && mobileNumber != "" && iss != "" && lang != "") {
+                var param = {
+                    ClientId: ClientId,
+                    phillipId: phillipId,
+                    countryCode: countryCode,
+                    mobileNo: mobileNumber,
+                    iss: iss,
+                    iat: iat,
+                }
+                $.ajax({
+                    url: createKey,
+                    data: JSON.stringify(param),
+                    type: "POST",
+                    contentType: 'application/json',
+                    success: function (res) {
+                        console.log(res)
+                        model.token(res.data)
+                        if (res.success == true) {
+                            var origin = window.location.origin;
+                            var path = (window.location.pathname).split("/")[1];
+                            var url_ = origin +"/"+ path + "?lang=" + lang;
+                            if (AECode != "") {
+                                url_ = url_ + "&AECode=" + AECode;
+                            }
+                            if (AEName != "") {
+                                url_ = url_ + "&AEName=" + AEName;
+                            }
+                            if (PromoCode != "") {
+                                url_ = url_ + "&PromoCode=" + PromoCode;
+                            }
+                            if (Source != "") {
+                                url_ = url_ + "&Source=" + Source;
+                            }
+                            window.open(url_ + "&token=" + res.data);
+                        } else {
+                            alert("failed message = " + res.message);
+                        }
+                        
+                        
+                    }
+                });
+            } else {
+                alert("please filled all input !!!")
+            }
+        }
+
+        decodeKey = function () {
+            param = {
+                token: model.token()
+            }
+            $.ajax({
+                url: meanKey,
+                data: JSON.stringify(param),
+                type: "POST",
+                contentType: 'application/json',
+                success: function (res) {
+                    console.log(res)
+                }
+            });
+        }
+
+        createEpoch = function () {
+            return new Date().getTime();
+        }
+        $(function () {
+            ko.applyBindings(model);
+        })
+    </script>
+</body>
+</html>

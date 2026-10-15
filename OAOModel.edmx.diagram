@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c15f56b4ab8944e1b86d9763975669cc" Name="Diagram1">
+        <EntityTypeShape EntityType="OAOModel.Country_List" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OAOModel.Tb_AccOpenRequest" Width="1.5" PointX="3" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="OAOModel.Tb_AccOpenRequestAddInfo" Width="1.5" PointX="11.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OAOModel.Tb_Attachment" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OAOModel.Tb_Bullion_InvestmentObjective" Width="1.5" PointX="6.75" PointY="26.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="OAOModel.Tb_BullionAccOpenRequest" Width="1.5" PointX="9" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="OAOModel.Tb_BullionTaxResident" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OAOModel.Tb_CA_TSCI_Import" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OAOModel.Tb_ClientInfo" Width="1.5" PointX="0.75" PointY="34.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="OAOModel.Tb_DKQuestionnaire" Width="1.5" PointX="0.75" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="OAOModel.Tb_DocumentStorageTransfer" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OAOModel.Tb_FAO_ClientInfoCheck" Width="1.5" PointX="5.25" PointY="22.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="OAOModel.Tb_Futures_InvestmentObjective" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OAOModel.Tb_FuturesAccOpenRequest" Width="1.5" PointX="6" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="OAOModel.Tb_FuturesTaxResident" Width="1.5" PointX="8.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OAOModel.Tb_InvestmentObjective" Width="1.5" PointX="1.5" PointY="28.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="OAOModel.tb_K2HK_Log" Width="1.5" PointX="13.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OAOModel.Tb_Lookup_Translation_Temp" Width="1.5" PointX="8.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OAOModel.Tb_MarginQuestion" Width="1.5" PointX="0.75" PointY="63.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="OAOModel.Tb_NDForm" Width="1.5" PointX="0.75" PointY="67" IsExpanded="true" />
+        <EntityTypeShape EntityType="OAOModel.Tb_OAOReservedAcctNo" Width="1.5" PointX="13.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OAOModel.Tb_RPQForm" Width="1.5" PointX="0.75" PointY="71.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="OAOModel.Tb_SAForm" Width="1.5" PointX="3.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="OAOModel.Tb_SOF" Width="1.5" PointX="1.5" PointY="54.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="OAOModel.Tb_TaxResident" Width="1.5" PointX="13.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OAOModel.W8BEN_Address" Width="1.5" PointX="6" PointY="31" IsExpanded="true" />
+        <EntityTypeShape EntityType="OAOModel.W8BEN_Certification" Width="1.5" PointX="6" PointY="35.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="OAOModel.W8BEN_Client" Width="1.5" PointX="3.75" PointY="26.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="OAOModel.W8BEN_PDF" Width="1.5" PointX="6" PointY="40.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="OAOModel.W8BEN_SupportDoc" Width="1.5" PointX="6" PointY="42.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OAOModel.W8BEN_TaxTreaty" Width="1.5" PointX="6" PointY="46.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="OAOModel.Tb_AccOpenRequest_bck20210311" Width="1.5" PointX="13.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OAOModel.Tb_AML" Width="1.5" PointX="15.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OAOModel.Tb_FutureAccAmendRequest" Width="1.5" PointX="15.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OAOModel.Tb_FuturesAccOpenRequest_bak20210419" Width="1.5" PointX="15.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OAOModel.Tb_OptionAccAmendRequest" Width="1.5" PointX="15.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OAOModel.tb_USoptionAmendmentRequest" Width="1.5" PointX="17.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OAOModel.W8BEN_Address_bak20200915" Width="1.5" PointX="17.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OAOModel.W8BEN_Certification_bak20200915" Width="1.5" PointX="17.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OAOModel.W8BEN_Client_bak20200915" Width="1.5" PointX="17.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OAOModel.W8BEN_TaxTreaty_bak20200915" Width="1.5" PointX="19.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="OAOModel.FK__Tb_AccOpe__Clien__4B7734FF" ManuallyRouted="false" />
+        <AssociationConnector Association="OAOModel.FK__Tb_AccOpe__Clien__4C6B5938" ManuallyRouted="false" />
+        <AssociationConnector Association="OAOModel.FK__Tb_AccOpe__RPQID__4D5F7D71" ManuallyRouted="false" />
+        <AssociationConnector Association="OAOModel.FK__Tb_AccOpe__RPQID__4E53A1AA" ManuallyRouted="false" />
+        <AssociationConnector Association="OAOModel.FK__Tb_AccOpen__DKID__4F47C5E3" ManuallyRouted="false" />
+        <AssociationConnector Association="OAOModel.FK__Tb_AccOpen__DKID__503BEA1C" ManuallyRouted="false" />
+        <AssociationConnector Association="OAOModel.FK__Tb_AccOpen__MQID__51300E55" ManuallyRouted="false" />
+        <AssociationConnector Association="OAOModel.FK__Tb_AccOpen__MQID__5224328E" ManuallyRouted="false" />
+        <AssociationConnector Association="OAOModel.FK__Tb_AccOpen__NDID__531856C7" ManuallyRouted="false" />
+        <AssociationConnector Association="OAOModel.FK__Tb_AccOpen__NDID__540C7B00" ManuallyRouted="false" />
+        <AssociationConnector Association="OAOModel.FK__Tb_FAO_Cl__AccOp__5BAD9CC8" ManuallyRouted="false" />
+        <AssociationConnector Association="OAOModel.FK__Tb_Bullio__Inves__31A25463" ManuallyRouted="false" />
+        <AssociationConnector Association="OAOModel.FK__Tb_Bullion__SAID__3296789C" ManuallyRouted="false" />
+        <AssociationConnector Association="OAOModel.FK__Tb_Bullion__W8ID__4CF5691D" ManuallyRouted="false" />
+        <AssociationConnector Association="OAOModel.FK__Tb_Client__InvtO__59C55456" ManuallyRouted="false" />
+        <AssociationConnector Association="OAOModel.FK__Tb_Client__SofID__5AB9788F" ManuallyRouted="false" />
+        <AssociationConnector Association="OAOModel.FK__Tb_Futures__DKID__3943762B" ManuallyRouted="false" />
+        <AssociationConnector Association="OAOModel.FK__Tb_Future__Inves__375B2DB9" ManuallyRouted="false" />
+        <AssociationConnector Association="OAOModel.FK__Tb_Future__RPQID__384F51F2" ManuallyRouted="false" />
+        <AssociationConnector Association="OAOModel.FK__Tb_Futures__SAID__3A379A64" ManuallyRouted="false" />
+        <AssociationConnector Association="OAOModel.FK__Tb_Futures__W8ID__51851410" ManuallyRouted="false" />
+        <AssociationConnector Association="OAOModel.FK_W8BEN_Address_W8BEN_Client_FormID" ManuallyRouted="false" />
+        <AssociationConnector Association="OAOModel.FK_W8BEN_Certification_W8BEN_Client_FormID" ManuallyRouted="false" />
+        <AssociationConnector Association="OAOModel.FK_W8BEN_PDF_W8BEN_Client_FormID" ManuallyRouted="false" />
+        <AssociationConnector Association="OAOModel.FK_W8BEN_SupportDoc_W8BEN_Client_FormID" ManuallyRouted="false" />
+        <AssociationConnector Association="OAOModel.FK_W8BEN_TaxTreaty_W8BEN_Client_FormID" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
